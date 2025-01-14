@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>check weather</title>
+
+  <!-- 
+  		- primary meta tags
+ 		-->
+
+  <meta name="title" content="check weather" />
+  <meta name="description" content="check weather is a weather app made by praveen yp" />
+
+  <!-- 
+   	 - Favicons
+     
+  	-->
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon" />
+
+  <!-- 
+    	- Googl font
+   	-->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- 
+      -custom CSS Link
+    -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- 
+      -custom JS Link
+    -->
+
+  <script src="./js/app.js" type="module" defer></script>
+  <script src="./js/route.js" type="module" defer></script>
+</head>
+<body>
+  <!-- 
+			- #HEADER
+		 -->
+
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="./public/images/logo1.png" alt="logo" width="364" height="38" />
+      </a>
+
+      <div class="search-view" data-search-view>
+        <div class="search-wrapper ">
+          <input type="search" name="search" placeholder="Search city..." class="search-field" autocomplete="off"
+            data-search-field />
+
+          <span class="m-icon leading-icon">search</span>
+
+          <button class="icon-btn leading-icon has-state" aria-label="close search" data-search-toggler>
+            <span class="m-icon">arrow_back</span>
+          </button>
+
+        </div>
+        <div class="search-result" data-search-result></div>
+      </div>
+
+      <div class="header-actions">
+
+        <button class="icon-btn has-state" aria-label="open search" data-search-toggler="">
+          <span class="m-icon icon">search</span>
+        </button>
+
+        <a href="#/current-location" class="btn-primary has-state" data-current-location-btn>
+          <span class="m-icon">my_location</span>
+
+          <spam class="span">Current Location</spam>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <article class="container" data-container>
+      <div class="content-left">
+        <!-- 
+				- #CURRENT WEATHER
+				-->
+
+        <section class="section current-weather" aria-label="current-weather" data-current-weather>
+          <div class="card card-lg current-weather-card"></div>
+        </section>
+
+
+        <section class="section forecast" aria-labelledby="forecast-label" data-5-day-forecast></section>
+      </div>
+
+
+      <div class="content-right">
+        <!-- 
+					- #HIGHLIGHTS
+				-->
+
+        <section class="section highlights" aria-labelledby="highlights" data-highlights>
+          <div class="card card-lg"></div>
+        </section>
+
+
+        <!-- 
+					- #HOURLY FORECAST
+				-->
+
+        <div class="section hourly-forecast" aria-label="hourly-forecast" data-hourly-forecast>
+
+
+        </div>
+      </div>
+
+
+      <!-- 
+				-#FOOTER
+			 -->
+
+      <footer class="footer">
+        <p class="body-3">Copyright
+          <script type="text/javascript">var year = new Date(); document.write(year.getFullYear());</script> Praveen YP. All
+          Rights Reserved.
+        </p>
+
+        <p class="body-3">
+          Powered By a. <a href="https://openweathermap.org/api" title="free OpenWeather api" target="_blank"
+            rel="noopener">
+            <img src="./public/images/openweather.png" width="150px" height="30" alt="" loading="lazy">
+          </a>
+        </p>
+      </footer>
+
+      <div class="loading" data-loading>
+
+      </div>
+    </article>
+  </main>
+
+  <!-- 
+		- #404 section
+	-->
+
+  <section class="error-content" data-error-content>
+    <h2 class="heading">404</h2>
+
+    <p class="body-1">Page not found!</p>
+
+    <a href="#/weather?lat=12.98&lon=77.5927" class="btn-primary">
+      <span>Go Home</span>
+    </a>
+  </section>
+
+</body>
+</html>
